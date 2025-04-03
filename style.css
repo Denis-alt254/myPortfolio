@@ -1,0 +1,275 @@
+/* Reset some default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling with a gradient background */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #60d687, #618edb); /* Gradient from purple to blue */
+    color: #fff; /* White text color for contrast */
+    line-height: 1.6;
+    padding: 0;
+    margin: 0;
+}
+
+/* Basic styling for the nav container */
+.navcontainer {
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for the navbar */
+    padding: 15px 30px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Logo styling */
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #0fe3eb; /* Light blue color for the logo */
+    text-decoration: none; /* Remove underline from the logo link */
+}
+.logo:hover {
+    color: #f4a261; /* Light orange color on hover */
+}
+
+/* Hide the nav links on small screens */
+.navlinks {
+    list-style-type: none;
+    display: flex;
+}
+
+/* These list items will be hidden on mobile */
+.navlinks li {
+    margin: 0 20px;
+}
+
+/* Style links for PC (desktop users) */
+.navlinks a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.navlinks a:hover {
+    color: #f4a261; /* Light orange color on hover */
+}
+
+/* Show hamburger icon only for mobile */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25px;
+    height: 20px;
+}
+
+.hamburger .line {
+    width: 100%;
+    height: 4px;
+    background-color: #fff;
+}
+
+/* Dropdown menu for mobile */
+.dropdown {
+    display: none; /* Hide dropdown by default */
+}
+
+/* Show the dropdown when on mobile view */
+@media (max-width: 768px) {
+    .navlinks {
+        display: none; /* Hide the nav links */
+        flex-direction: column;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.8); /* Dark background for dropdown */
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 10px 0;
+    }
+
+    .navlinks li {
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    .navlinks a {
+        color: #fff;
+        font-size: 20px;
+        padding: 10px 20px;
+        text-decoration: none;
+        display: block;
+        transition: background-color 0.3s ease;
+    }
+
+    .navlinks a:hover {
+        background-color: #f4a261; /* Light orange color on hover */
+    }
+
+    /* Show hamburger menu */
+    .hamburger {
+        display: flex;
+    }
+
+    /* Show the dropdown menu when clicked */
+    .dropdown.active .navlinks {
+        display: flex;
+    }
+
+    /* Menu button (in place of regular navbar) */
+    .dropdown .dropbtn {
+        background-color: transparent;
+        color: #fff;
+        font-size: 18px;
+        border: none;
+        cursor: pointer;
+    }
+}
+
+/* Styling for the content sections */
+.aboutcontainer {
+    padding: 50px 20px;
+    max-width: 1200px;
+    margin: 100px auto 0; /* Add top margin to avoid overlap with fixed navbar */
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 600;
+    color: rgb(18, 19, 19);
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    text-align: center;
+    font-weight: 600;
+    color: rgb(18, 19, 19);
+}
+h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    text-align: center;
+    font-weight: 600;
+    color: rgb(18, 19, 19);
+}
+
+/* Section-specific background colors */
+#aboutme {
+    background-color: rgba(255, 255, 255, 0.918); /* Slightly transparent white for 'About Me' */
+    border-radius: 8px;
+    padding: 40px;
+    color: #333;
+    box-shadow: 0 4px 15px rgba(197, 57, 185, 0.918); /* Soft shadow around sections */
+}
+
+#education, #interests, #projects {
+    background-color: rgba(255, 255, 255, 0.918);  /* Transparent white background */
+    border-radius: 8px;
+    padding: 40px;
+    color: #333;
+    box-shadow: 0 4px 15px rgba(197, 57, 185, 0.918); /* Soft shadow for sections */
+}
+
+#contactme {
+    background-color: rgba(255, 255, 255, 0.918);  /* Darker transparent background */
+    padding: 50px;
+    color: #333;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(197, 57, 185, 0.918);
+}
+
+/* Form styling */
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 30px auto;
+    background-color: rgba(129, 243, 222, 0.863); /* Light transparent background for the form */
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+    color: #e77416; /* Light orange label text */
+    font-weight: 600;
+}
+
+input,
+textarea {
+    padding: 12px;
+    margin-bottom: 18px;
+    border-radius: 5px;
+    border: 1px solid #777fc0;
+    background-color: #fff;
+    color: #333;
+    font-size: 1rem;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #2575fc; /* Focus color for input fields */
+    outline: none;
+}
+
+/* Submit button styling */
+button {
+    background-color: #1366f7; /* Button color */
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+    font-weight: 600;
+}
+
+button:hover {
+    background-color: #6a11cb; /* Darker shade on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navlinks {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navlinks li {
+        margin: 10px 0;
+    }
+
+    form {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+}

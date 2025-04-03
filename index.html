@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyPortfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <div class="navcontainer">
+        <nav>
+            <div class="navbar">
+                <div class="logo">MyPortfolio</div>
+                <ul class="navlinks">
+                    <li><a href="#aboutme">About Me</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#interests">Interests</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contactme">Contact Me</a></li>
+                </ul>
+                <!-- Hamburger icon for mobile -->
+                <div class="hamburger" onclick="toggleMenu()">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Content Sections -->
+    <div class="aboutcontainer" id="aboutme">
+        <div class="aboutme">
+            <h1>About Me</h1>
+            <p>Hi, I'm Denis Kipkurui, a passionate web developer with a love for creating beautiful and functional websites. I have experience in HTML, CSS, C, C++, Python, MYSQL and JavaScript, and I'm always eager to learn new technologies.</p>
+        </div>
+    </div>
+
+    <div class="aboutcontainer" id="education">
+        <div class="education">
+            <h1>Education</h1>
+            <h2>Zetech University</h2>
+            <h3>Bachelor of Science in Software Engineering</h3>
+            <p>Currently pursuing a Bachelor of Science in Software Engineering at Zetech University. My coursework focuses on various aspects of software development, including programming, algorithms, data structures, databases, software design, and system analysis. The program also emphasizes practical experience through projects and collaborations, allowing me to apply theoretical knowledge in real-world scenarios.</p>
+            <h2>Full-Stack Engineering Student</h2>
+            <h3>Power Learn Projects</h3>
+            <p>Enrolled in Power Learn Projects, where I am working towards becoming a Full-Stack Engineer. The program emphasizes both front-end and back-end development, enhancing my skills in building complete web applications.</p>
+        </div>
+    </div>
+
+    <div class="aboutcontainer" id="interests">
+        <div class="interests">
+            <h1>Interests</h1>
+            <p>In my free time, I enjoy exploring new technologies, contributing to open-source projects, and learning about web design trends. I also love hiking and photography.</p>
+        </div>
+    </div>
+
+    <div class="aboutcontainer" id="projects">
+        <div class="projects">
+            <h1>Projects</h1>
+            <ul class="myprojects">
+                <li>
+                    <a href="https://github.com/yourusername/project1" target="_blank">Project 1</a>
+                    <p>A brief description of what Project 1 does, technologies used, and its purpose.</p>
+                </li>
+                <li>
+                    <a href="https://github.com/yourusername/project2" target="_blank">Project 2</a>
+                    <p>A brief description of Project 2, including features, goals, and tech stack.</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="aboutcontainer" id="contactme">
+        <div class="contactme">
+            <h1>Contact Me</h1>
+            <p>If you'd like to get in touch, feel free to reach out via email at [deniskipkurui2024@gmail.com] or connect with me on <a href="https://www.linkedin.com/in/denis-kipkurui-bb33ba323/">LinkedIn</a>.</p>
+            <form action="MYPORTFOLIO/submit_form.php" method="POST">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required>
+    
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" required>
+    
+                <label for="message">Your Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+    
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- JavaScript to toggle the mobile menu -->
+    <script>
+        function toggleMenu() {
+            const navLinks = document.querySelector('.navlinks');
+            navLinks.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
