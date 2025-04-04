@@ -45,7 +45,7 @@ Clone the repository to your local machine:
 
 bash
 Copy
-git clone https://github.com/yourusername/portfolio.git
+https://github.com/Denis-alt254/myPortfolio.git
 Navigate to the project folder:
 
 bash
