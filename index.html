@@ -61,12 +61,12 @@
             <h1>Projects</h1>
             <ul class="myprojects">
                 <li>
-                    <a href="https://github.com/yourusername/project1" target="_blank">Project 1</a>
-                    <p>A brief description of what Project 1 does, technologies used, and its purpose.</p>
+                    <a href="https://github.com/Denis-alt254/jobhive2.git" target="_blank">JobHive</a>
+                    <p>A platform connecting employers and job seekers. Employers can post job listings, review resumes, and communicate with candidates. Job seekers can create profiles, search for jobs, apply directly, and receive job recommendations based on skills and experience. Both parties benefit from streamlined recruitment and job search processes.</p>
                 </li>
                 <li>
-                    <a href="https://github.com/yourusername/project2" target="_blank">Project 2</a>
-                    <p>A brief description of Project 2, including features, goals, and tech stack.</p>
+                    <a href="https://github.com/Denis-alt254/VSSamble/blob/main/todolist.c" target="_blank">To-Do App</a>
+                    <p>A productivity tool designed to help users manage tasks efficiently. Features include task creation, categorization, deadlines, reminders, and progress tracking. Users can prioritize tasks, set notifications, and mark them as completed, all within an intuitive interface to boost organization and time management.</p>
                 </li>
             </ul>
         </div>
@@ -75,8 +75,8 @@
     <div class="aboutcontainer" id="contactme">
         <div class="contactme">
             <h1>Contact Me</h1>
-            <p>If you'd like to get in touch, feel free to reach out via email at [deniskipkurui2024@gmail.com] or connect with me on <a href="https://www.linkedin.com/in/denis-kipkurui-bb33ba323/">LinkedIn</a>.</p>
-            <form action="MYPORTFOLIO/submit_form.php" method="POST">
+            <p>If you'd like to get in touch, feel free to reach out via email at deniskipkurui2024@gmail.com or connect with me on <a href="https://www.linkedin.com/in/denis-kipkurui-bb33ba323/">LinkedIn</a>.</p>
+            <form id="contact-form" action="https://wa.me/1234567890" method="POST">
                 <label for="name">Your Name:</label>
                 <input type="text" id="name" name="name" required>
     
@@ -91,12 +91,30 @@
         </div>
     </div>
 
-    <!-- JavaScript to toggle the mobile menu -->
     <script>
+        // Function to toggle the mobile menu
         function toggleMenu() {
             const navLinks = document.querySelector('.navlinks');
             navLinks.classList.toggle('active');
         }
+        // Add an event listener for form submission
+        document.getElementById("contact-form").addEventListener("submit", function(event) {
+            event.preventDefault();  // Prevent default form submission
+
+            // Collect form data
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var message = document.getElementById("message").value;
+
+            // Create the message to be sent on WhatsApp
+            var whatsappMessage = `*Name*: ${name}\n*Email*: ${email}\n*Message*: ${message}`;
+
+            // Replace spaces with URL encoding and create the WhatsApp link
+            var whatsappLink = `https://wa.me/254792755794?text=${encodeURIComponent(whatsappMessage)}`;
+
+            // Open WhatsApp with the generated message
+            window.open(whatsappLink, "_blank");
+        });
     </script>
 </body>
 </html>
